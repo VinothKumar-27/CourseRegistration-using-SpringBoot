@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration System</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f0f0, #dcd6e8); /* lavender-grey gradient */
+            text-align: center;
+            padding: 50px 20px;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            color: #4b0082; /* Deep lavender */
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        /* Form container */
+        form {
+            margin: auto;
+            padding: 35px 25px;
+            width: 400px;
+            background-color: #1a1a1a; /* Black background */
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Input and select styling */
+        input, select {
+            width: 90%;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border: 2px solid #4b0082; /* Lavender border */
+            border-radius: 8px;
+            font-size: 1em;
+            background-color: #f0f0f0; /* Light grey input */
+            color: #1a1a1a;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #9370db; /* Soft lavender focus */
+            box-shadow: 0 0 10px rgba(147,112,219,0.4);
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            width: 95%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(to right, #4b0082, #9370db); /* lavender gradient */
+            color: white;
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #9370db, #4b0082);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Labels */
+        label {
+            font-weight: bold;
+            font-size: 1em;
+            display: block;
+            text-align: left;
+            margin-left: 5%;
+            color: #f0f0f0; /* white-ish text on black form */
+        }
+
+        /* Option styling */
+        select option {
+            padding: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            form {
+                width: 90%;
+            }
+
+            input, select, button {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Kickstart with Exciting Courses</h1>
+    
+    <form action="http://localhost:8080/courses/register" method="post">
+        <label for="name">Enter your name</label>
+        <input type="text" name="name" placeholder="John Doe" required>
+
+        <label for="email">Enter your emailId</label>
+        <input type="email" name="emailId" placeholder="example@email.com" required>
+
+        <label for="Course">Choose your course</label>
+        <select name="courseName" required>
+            <option value="Java Essentials">Java Essentials</option>
+            <option value="Python for ML">Python for Machine Learning</option>
+            <option value="Spring Boot">Spring Boot</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

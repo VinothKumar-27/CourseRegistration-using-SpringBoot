@@ -1,0 +1,78 @@
+<html>
+<head>
+    <script type="text/javascript" src="myscript.js"></script>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #fefefe, #d9f0fc); /* Light gradient */
+            padding: 50px;
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            width: 80%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        th {
+            background: linear-gradient(to right, #6ec1e4, #3a9bdc); /* Soft blue gradient */
+            color: white;
+            padding: 14px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            background-color: #f7fbff;
+            padding: 12px 18px;
+            border-bottom: 1px solid #e0e8f0;
+            transition: background 0.3s ease;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #eaf4fc;
+        }
+
+        tr:hover td {
+            background-color: #d0e8fb;
+        }
+
+        table, th, td {
+            border: none;
+        }
+
+        tbody tr {
+            transition: transform 0.2s ease;
+        }
+
+        tbody tr:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr align="center">
+            <th width="100">Name</th>
+            <th width="200">Email Id</th>
+            <th width="150">Course Name</th>
+        </tr>
+
+        <tbody align="center" id="enrolledtable"></tbody> <!-- Table body where rows will be inserted -->
+    </table>
+
+    <script type="text/javascript">
+        window.onload = function(){
+            showEnrolledStudents();
+        };
+    </script>
+</body>
+</html>
